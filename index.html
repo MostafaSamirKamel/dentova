@@ -1,0 +1,2589 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DENTOVA | دينتوفا لمستلزمات وأجهزة طب الأسنان</title>
+    <meta name="description" content="دينتوفا - شريكك الموثوق في مستلزمات وأجهزة طب الأسنان. عروض حصرية، منتجات أصلية، وأفضل الأسعار للعيادات والمراكز الطبية.">
+    
+    <!-- Google Fonts: Cairo & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Brand Identity Colors (From Dentova Brand Guide) */
+            --dentova-navy: #0B2D5B;
+            --dentova-navy-dark: #071C3A;
+            --dentova-navy-light: #12407E;
+            --dentova-cyan: #00AEEF;
+            --dentova-cyan-dark: #0088CC;
+            --dentova-cyan-light: #E0F5FE;
+            --dentova-slate: #C7CCD8;
+            --dentova-gray-bg: #F4F7FB;
+            --dentova-card-bg: #FFFFFF;
+            --dentova-border: #E2E8F0;
+            
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --text-light: #94A3B8;
+            
+            --whatsapp-color: #25D366;
+            --whatsapp-dark: #1EBE5D;
+            --danger-color: #EF4444;
+            --success-color: #10B981;
+            --warning-color: #F59E0B;
+            
+            --shadow-sm: 0 2px 4px rgba(11, 45, 91, 0.04);
+            --shadow-md: 0 4px 14px rgba(11, 45, 91, 0.08);
+            --shadow-lg: 0 10px 25px rgba(11, 45, 91, 0.12);
+            --shadow-glow: 0 0 20px rgba(0, 174, 239, 0.35);
+            
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 18px;
+            --radius-full: 9999px;
+            
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--dentova-gray-bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding-bottom: 120px;
+            line-height: 1.6;
+        }
+
+        /* Top Announcement Ticker */
+        .top-bar {
+            background: linear-gradient(90deg, var(--dentova-navy-dark), var(--dentova-navy));
+            color: #FFFFFF;
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 174, 239, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .top-bar span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .top-bar .badge-live {
+            background: var(--dentova-cyan);
+            color: var(--dentova-navy-dark);
+            padding: 2px 8px;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 0.75rem;
+        }
+
+        /* =======================================================
+           Site Header & Navigation Bar (Horizontal Row Layout)
+        ======================================================= */
+        header.site-header {
+            background: #FFFFFF;
+            box-shadow: var(--shadow-md);
+            border-bottom: 1px solid var(--dentova-border);
+            position: sticky;
+            top: 0;
+            z-index: 500;
+        }
+
+        .navbar-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            direction: ltr !important;
+        }
+
+        /* Brand Block (Horizontal Row: Logo + Text Stack) */
+        .navbar-brand-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: inherit;
+            direction: ltr !important;
+            unicode-bidi: isolate;
+            transition: var(--transition);
+        }
+
+        .navbar-brand-link:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+        }
+
+        /* SVG Logo in Navbar */
+        .navbar-logo-svg {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            filter: drop-shadow(0 3px 8px rgba(0, 174, 239, 0.25));
+            transition: var(--transition);
+        }
+
+        .navbar-brand-link:hover .navbar-logo-svg {
+            transform: scale(1.05);
+            filter: drop-shadow(0 4px 12px rgba(0, 174, 239, 0.45));
+        }
+
+        /* Brand Text Stack */
+        .brand-text-stack {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+            line-height: 1;
+            direction: ltr !important;
+            unicode-bidi: isolate;
+        }
+
+        /* DENTOVA Typography */
+        .dentova-brand-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.65rem;
+            letter-spacing: 4px;
+            color: var(--dentova-navy);
+            line-height: 1;
+            display: inline-flex;
+            align-items: center;
+            direction: ltr !important;
+            unicode-bidi: isolate;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Styled 'A' with Cyan Triangle */
+        .a-styled {
+            position: relative;
+            display: inline-block;
+            color: var(--dentova-navy);
+        }
+
+        .a-triangle {
+            position: absolute;
+            bottom: 12%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 4.5px solid transparent;
+            border-right: 4.5px solid transparent;
+            border-bottom: 7px solid var(--dentova-cyan);
+            pointer-events: none;
+        }
+
+        .dentova-brand-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.58rem;
+            letter-spacing: 2px;
+            color: var(--dentova-navy);
+            font-weight: 700;
+            text-transform: uppercase;
+            direction: ltr !important;
+            unicode-bidi: isolate;
+        }
+
+        /* Center / Middle Navbar Area (Slogan & Taglines) */
+        .navbar-middle-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            text-align: center;
+        }
+
+        .dentova-partner-line {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            direction: ltr !important;
+            unicode-bidi: isolate;
+        }
+
+        .line-wing {
+            width: 28px;
+            height: 1.5px;
+            background: linear-gradient(90deg, transparent, var(--dentova-cyan));
+        }
+
+        .line-wing:last-child {
+            background: linear-gradient(90deg, var(--dentova-cyan), transparent);
+        }
+
+        .partner-text {
+            font-family: 'Montserrat', 'Cairo', sans-serif;
+            font-size: 0.8rem;
+            color: var(--dentova-cyan-dark);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .dentova-ar-tagline {
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            direction: rtl;
+        }
+
+        /* Actions (WhatsApp + Cart) Row */
+        .navbar-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .nav-action-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 8px 16px;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 700;
+            font-family: inherit;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .btn-whatsapp-nav {
+            background: rgba(37, 211, 102, 0.12);
+            color: #128C7E;
+            border: 1px solid rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-whatsapp-nav:hover {
+            background: var(--whatsapp-color);
+            color: #FFFFFF;
+            border-color: var(--whatsapp-color);
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn-cart-nav {
+            background: var(--dentova-cyan-light);
+            color: var(--dentova-navy);
+            border: 1px solid rgba(0, 174, 239, 0.4);
+        }
+
+        .btn-cart-nav:hover {
+            background: var(--dentova-cyan);
+            color: #FFFFFF;
+            border-color: var(--dentova-cyan);
+            box-shadow: var(--shadow-glow);
+            transform: translateY(-2px);
+        }
+
+        .cart-badge-count {
+            background: var(--dentova-navy);
+            color: #FFFFFF;
+            font-size: 0.72rem;
+            padding: 2px 7px;
+            border-radius: var(--radius-full);
+            min-width: 20px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .btn-cart-nav:hover .cart-badge-count {
+            background: #FFFFFF;
+            color: var(--dentova-navy);
+        }
+
+        /* Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 16px;
+        }
+
+        /* Hero Banner */
+        .hero-banner {
+            background: linear-gradient(135deg, var(--dentova-navy-dark) 0%, var(--dentova-navy) 60%, #104C96 100%);
+            border-radius: var(--radius-lg);
+            padding: 28px 24px;
+            color: #FFFFFF;
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            left: -40px;
+            width: 260px;
+            height: 260px;
+            background: radial-gradient(circle, rgba(0, 174, 239, 0.25) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            right: 10%;
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(0, 174, 239, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 174, 239, 0.2);
+            border: 1px solid rgba(0, 174, 239, 0.5);
+            color: #E0F5FE;
+            padding: 4px 16px;
+            border-radius: var(--radius-full);
+            font-size: 0.84rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .hero-title {
+            font-size: 1.85rem;
+            font-weight: 800;
+            line-height: 1.35;
+            margin-bottom: 8px;
+            color: #FFFFFF;
+        }
+
+        .hero-title .highlight {
+            color: var(--dentova-cyan);
+            text-shadow: 0 0 15px rgba(0, 174, 239, 0.4);
+        }
+
+        .hero-desc {
+            font-size: 0.95rem;
+            color: #CBD5E1;
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+
+        .doctor-quote-box {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-right: 4px solid var(--dentova-cyan);
+            padding: 12px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            color: #F1F5F9;
+            margin-bottom: 20px;
+            text-align: right;
+        }
+
+        .hero-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+            text-align: right;
+        }
+
+        .hero-feature-item {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 10px 14px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            transition: var(--transition);
+        }
+
+        .hero-feature-item:hover {
+            background: rgba(0, 174, 239, 0.15);
+            border-color: rgba(0, 174, 239, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .feature-icon-bubble {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: rgba(0, 174, 239, 0.25);
+            color: var(--dentova-cyan);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        /* Search & Filter Bar */
+        .controls-panel {
+            background: #FFFFFF;
+            border-radius: var(--radius-lg);
+            padding: 18px 20px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--dentova-border);
+            position: sticky;
+            top: 15px;
+            z-index: 90;
+        }
+
+        .search-row {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-box-wrapper {
+            flex: 1;
+            min-width: 260px;
+            position: relative;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            pointer-events: none;
+            font-size: 1.1rem;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 48px 12px 40px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            border: 2px solid var(--dentova-border);
+            border-radius: var(--radius-full);
+            background: var(--dentova-gray-bg);
+            color: var(--text-main);
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .search-input:focus {
+            border-color: var(--dentova-cyan);
+            background: #FFFFFF;
+            box-shadow: 0 0 0 4px rgba(0, 174, 239, 0.15);
+        }
+
+        .search-clear-btn {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 1rem;
+            display: none;
+        }
+
+        .filter-select {
+            padding: 12px 18px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 2px solid var(--dentova-border);
+            border-radius: var(--radius-full);
+            background: var(--dentova-gray-bg);
+            color: var(--text-main);
+            outline: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-select:focus {
+            border-color: var(--dentova-cyan);
+        }
+
+        /* Category Filter Pills */
+        .category-pills-bar {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-top: 14px;
+            scrollbar-width: thin;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .category-pills-bar::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .category-pills-bar::-webkit-scrollbar-thumb {
+            background: var(--dentova-slate);
+            border-radius: 4px;
+        }
+
+        .category-pill {
+            background: var(--dentova-gray-bg);
+            color: var(--text-main);
+            border: 1px solid var(--dentova-border);
+            padding: 8px 16px;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+            user-select: none;
+        }
+
+        .category-pill:hover {
+            background: var(--dentova-cyan-light);
+            border-color: var(--dentova-cyan);
+            color: var(--dentova-navy);
+        }
+
+        .category-pill.active {
+            background: var(--dentova-navy);
+            color: #FFFFFF;
+            border-color: var(--dentova-navy);
+            box-shadow: 0 4px 10px rgba(11, 45, 91, 0.25);
+        }
+
+        .category-pill.active .pill-count {
+            background: var(--dentova-cyan);
+            color: var(--dentova-navy-dark);
+        }
+
+        .pill-count {
+            background: rgba(0, 0, 0, 0.08);
+            padding: 1px 6px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        /* Section Title & Header */
+        .category-section {
+            margin-bottom: 30px;
+            scroll-margin-top: 150px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #E2E8F0;
+        }
+
+        .section-title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--dentova-navy), var(--dentova-cyan-dark));
+            color: #FFFFFF;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 6px rgba(11, 45, 91, 0.2);
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--dentova-navy);
+        }
+
+        .section-subtitle-en {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-items-badge {
+            background: #E2E8F0;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: var(--radius-full);
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            gap: 14px;
+        }
+
+        /* Product Card */
+        .product-card {
+            background: var(--dentova-card-bg);
+            border: 1px solid var(--dentova-border);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--dentova-cyan);
+            box-shadow: var(--shadow-md);
+        }
+
+        .product-card.in-cart {
+            border-color: var(--dentova-cyan);
+            background: linear-gradient(180deg, #FFFFFF 0%, rgba(224, 245, 254, 0.3) 100%);
+        }
+
+        .product-top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            gap: 8px;
+        }
+
+        .product-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: var(--radius-full);
+            background: var(--dentova-cyan-light);
+            color: var(--dentova-cyan-dark);
+            border: 1px solid rgba(0, 174, 239, 0.2);
+            white-space: nowrap;
+        }
+
+        .product-title {
+            font-weight: 700;
+            font-size: 0.98rem;
+            color: var(--text-main);
+            margin-bottom: 12px;
+            line-height: 1.4;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-bottom-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed var(--dentova-border);
+        }
+
+        .price-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .price-label {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .price-val {
+            font-family: 'Montserrat', 'Cairo', sans-serif;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--dentova-navy);
+            display: flex;
+            align-items: baseline;
+            gap: 3px;
+        }
+
+        .price-currency {
+            font-size: 0.78rem;
+            color: var(--dentova-cyan-dark);
+            font-weight: 700;
+        }
+
+        /* Product Action Controls */
+        .card-actions {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-add-cart {
+            background: linear-gradient(135deg, var(--dentova-navy), var(--dentova-navy-light));
+            color: #FFFFFF;
+            border: none;
+            padding: 8px 14px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 0.85rem;
+            font-family: inherit;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+        }
+
+        .btn-add-cart:hover {
+            background: linear-gradient(135deg, var(--dentova-cyan-dark), var(--dentova-cyan));
+            box-shadow: 0 4px 10px rgba(0, 174, 239, 0.3);
+            transform: scale(1.02);
+        }
+
+        /* Active Quantity Counter inside Card */
+        .card-qty-control {
+            display: none;
+            align-items: center;
+            background: var(--dentova-cyan-light);
+            border: 1px solid var(--dentova-cyan);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+        }
+
+        .card-qty-control.show {
+            display: flex;
+        }
+
+        .card-qty-btn {
+            background: none;
+            border: none;
+            width: 30px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1rem;
+            color: var(--dentova-navy);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .card-qty-btn:hover {
+            background: var(--dentova-cyan);
+            color: #FFFFFF;
+        }
+
+        .card-qty-val {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: var(--dentova-navy);
+            min-width: 26px;
+            text-align: center;
+            padding: 0 4px;
+        }
+
+        /* Empty / No Results */
+        .no-results-box {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+            background: #FFFFFF;
+            border-radius: var(--radius-lg);
+            border: 1px dashed var(--dentova-border);
+            margin: 20px 0;
+        }
+
+        .no-results-icon {
+            font-size: 3rem;
+            color: var(--dentova-slate);
+            margin-bottom: 12px;
+        }
+
+        .no-results-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--dentova-navy);
+            margin-bottom: 6px;
+        }
+
+        .no-results-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Floating Bottom Cart Bar */
+        .floating-cart-bar {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 30px);
+            max-width: 900px;
+            background: rgba(11, 45, 91, 0.96);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 174, 239, 0.4);
+            border-radius: var(--radius-full);
+            padding: 10px 20px;
+            box-shadow: 0 10px 30px rgba(7, 28, 58, 0.4);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .floating-summary {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #FFFFFF;
+        }
+
+        .floating-cart-icon {
+            width: 42px;
+            height: 42px;
+            background: var(--dentova-cyan);
+            color: var(--dentova-navy-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        .floating-cart-count {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            background: var(--danger-color);
+            color: #FFFFFF;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 1px 5px;
+            border-radius: var(--radius-full);
+            border: 2px solid var(--dentova-navy);
+        }
+
+        .floating-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .floating-total-label {
+            font-size: 0.72rem;
+            color: #94A3B8;
+            font-weight: 600;
+        }
+
+        .floating-total-val {
+            font-family: 'Montserrat', 'Cairo', sans-serif;
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: #FFFFFF;
+        }
+
+        .floating-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-view-drawer {
+            background: rgba(255, 255, 255, 0.15);
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 10px 18px;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 0.9rem;
+            font-family: inherit;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-view-drawer:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-fast-whatsapp {
+            background: var(--whatsapp-color);
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--radius-full);
+            font-weight: 800;
+            font-size: 0.9rem;
+            font-family: inherit;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+        }
+
+        .btn-fast-whatsapp:hover {
+            background: var(--whatsapp-dark);
+            transform: scale(1.03);
+        }
+
+        /* Cart Drawer & Modal System */
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(11, 25, 44, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 1100;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .drawer-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .cart-drawer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            max-width: 500px;
+            height: 100vh;
+            background: #FFFFFF;
+            z-index: 1200;
+            box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            transform: translateX(-100%);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .cart-drawer.active {
+            transform: translateX(0);
+        }
+
+        .drawer-header {
+            padding: 18px 20px;
+            background: var(--dentova-navy);
+            color: #FFFFFF;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--dentova-cyan);
+        }
+
+        .drawer-title-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .drawer-title-box h3 {
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+
+        .drawer-close-btn {
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: #FFFFFF;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .drawer-close-btn:hover {
+            background: var(--danger-color);
+        }
+
+        .drawer-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px 20px;
+        }
+
+        .drawer-empty-cart {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+        }
+
+        .drawer-empty-icon {
+            font-size: 3.5rem;
+            color: var(--dentova-slate);
+            margin-bottom: 15px;
+        }
+
+        .cart-item-card {
+            background: var(--dentova-gray-bg);
+            border: 1px solid var(--dentova-border);
+            border-radius: var(--radius-md);
+            padding: 12px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+
+        .cart-item-card:hover {
+            border-color: var(--dentova-cyan);
+            background: #FFFFFF;
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-name {
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
+
+        .cart-item-calc {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .cart-item-calc .item-subtotal {
+            font-weight: 800;
+            color: var(--dentova-navy);
+        }
+
+        .cart-item-actions {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .cart-drawer-qty-btn {
+            width: 28px;
+            height: 28px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--dentova-border);
+            background: #FFFFFF;
+            color: var(--dentova-navy);
+            font-weight: 800;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .cart-drawer-qty-btn:hover {
+            background: var(--dentova-cyan);
+            color: #FFFFFF;
+            border-color: var(--dentova-cyan);
+        }
+
+        .cart-drawer-qty-val {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.9rem;
+            min-width: 22px;
+            text-align: center;
+        }
+
+        .cart-item-remove-btn {
+            background: none;
+            border: none;
+            color: var(--danger-color);
+            cursor: pointer;
+            padding: 4px;
+            font-size: 1rem;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .cart-item-remove-btn:hover {
+            opacity: 1;
+            transform: scale(1.15);
+        }
+
+        /* Doctor Order Form in Drawer */
+        .doctor-form-section {
+            background: #FFFFFF;
+            border: 1px solid var(--dentova-border);
+            border-radius: var(--radius-md);
+            padding: 14px;
+            margin-top: 15px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .form-section-header {
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: var(--dentova-navy);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 9px 12px;
+            border: 1px solid var(--dentova-border);
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 0.88rem;
+            background: var(--dentova-gray-bg);
+            color: var(--text-main);
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-input:focus {
+            border-color: var(--dentova-cyan);
+            background: #FFFFFF;
+        }
+
+        /* Drawer Footer */
+        .drawer-footer {
+            padding: 16px 20px;
+            background: #FFFFFF;
+            border-top: 1px solid var(--dentova-border);
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .drawer-summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .drawer-total-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0 16px;
+            padding-top: 8px;
+            border-top: 1px dashed var(--dentova-border);
+        }
+
+        .drawer-total-label {
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--dentova-navy);
+        }
+
+        .drawer-total-amount {
+            font-family: 'Montserrat', 'Cairo', sans-serif;
+            font-weight: 900;
+            font-size: 1.4rem;
+            color: var(--success-color);
+        }
+
+        .drawer-actions-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+
+        .btn-drawer-whatsapp {
+            background: var(--whatsapp-color);
+            color: #FFFFFF;
+            border: none;
+            padding: 12px;
+            border-radius: var(--radius-md);
+            font-weight: 800;
+            font-size: 0.98rem;
+            font-family: inherit;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-drawer-whatsapp:hover {
+            background: var(--whatsapp-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-drawer-secondary-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .btn-drawer-secondary {
+            background: var(--dentova-gray-bg);
+            color: var(--text-main);
+            border: 1px solid var(--dentova-border);
+            padding: 9px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 0.82rem;
+            font-family: inherit;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: var(--transition);
+        }
+
+        .btn-drawer-secondary:hover {
+            background: #FFFFFF;
+            border-color: var(--dentova-cyan);
+            color: var(--dentova-navy);
+        }
+
+        .btn-clear-cart {
+            color: var(--danger-color);
+        }
+
+        .btn-clear-cart:hover {
+            background: #FEF2F2;
+            border-color: var(--danger-color);
+            color: var(--danger-color);
+        }
+
+        /* Toast Notifications */
+        .toast-notification {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100px);
+            background: var(--dentova-navy-dark);
+            color: #FFFFFF;
+            padding: 12px 24px;
+            border-radius: var(--radius-full);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--dentova-cyan);
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 2000;
+            opacity: 0;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .toast-notification.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Invoice Print View */
+        #invoicePrintArea {
+            display: none;
+        }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #invoicePrintArea, #invoicePrintArea * {
+                visibility: visible;
+            }
+            #invoicePrintArea {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                background: #FFFFFF;
+                padding: 25px;
+                color: #000000;
+            }
+            .invoice-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+            }
+            .invoice-table th, .invoice-table td {
+                border: 1px solid #CBD5E1;
+                padding: 8px 12px;
+                text-align: right;
+            }
+            .invoice-table th {
+                background-color: #F1F5F9;
+            }
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .navbar-middle-info {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-container {
+                padding: 10px 14px;
+                gap: 8px;
+            }
+            .navbar-logo-svg {
+                width: 40px;
+                height: 40px;
+            }
+            .dentova-brand-title {
+                font-size: 1.35rem;
+                letter-spacing: 2.5px;
+            }
+            .dentova-brand-subtitle {
+                font-size: 0.5rem;
+                letter-spacing: 1.2px;
+            }
+            .nav-action-btn {
+                padding: 7px 12px;
+                font-size: 0.8rem;
+            }
+            .btn-whatsapp-nav span.nav-btn-text {
+                display: none;
+            }
+            .hero-banner {
+                padding: 20px 16px;
+            }
+            .hero-title {
+                font-size: 1.45rem;
+            }
+            .controls-panel {
+                top: 75px;
+                padding: 14px;
+            }
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            .floating-cart-bar {
+                padding: 8px 14px;
+                bottom: 10px;
+            }
+            .btn-fast-whatsapp span {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <span><strong class="badge-live">DENTOVA</strong> شريكك الطبي الموثوق لتجهيز العيادات والمراكز</span>
+        <span>🚚 شحن سريع وتوصيل لكافة المحافظات</span>
+        <span>🛡️ منتجات أصلية 100% معتمدة</span>
+        <span>📞 استشارات وطلبات مباشرة: <strong>01061232326</strong></span>
+    </div>
+
+    <!-- Standard Horizontal Row Navigation Bar -->
+    <header class="site-header">
+        <div class="navbar-container">
+            
+            <!-- Brand Block: Logo + Brand Name in Horizontal Row -->
+            <a href="#" class="navbar-brand-link" title="DENTOVA Dental Supplies & Equipment">
+                <!-- Precision Official Tooth & Orbit Logo -->
+                <svg class="navbar-logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="navToothGrad" x1="20" y1="15" x2="80" y2="90" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#00AEEF"/>
+                            <stop offset="100%" stop-color="#0B2D5B"/>
+                        </linearGradient>
+                        <linearGradient id="navOrbitGrad" x1="10" y1="75" x2="90" y2="35" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#0B2D5B"/>
+                            <stop offset="60%" stop-color="#00AEEF"/>
+                            <stop offset="100%" stop-color="#00AEEF"/>
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Back portion of 3D orbit ring (wrapped behind tooth) -->
+                    <path d="M 82 40 C 88 44, 88 50, 78 57 C 68 64, 48 72, 28 75" fill="none" stroke="url(#navOrbitGrad)" stroke-width="5" stroke-linecap="round" opacity="0.9" />
+
+                    <!-- Tooth Molar Contour -->
+                    <path d="M 50 16 
+                             C 42 16, 28 20, 22 32 
+                             C 14 46, 18 68, 28 84 
+                             C 33 92, 38 97, 42 95 
+                             C 45 93, 47 78, 50 76 
+                             C 53 78, 55 93, 58 95 
+                             C 62 97, 67 92, 72 84 
+                             C 82 68, 86 46, 78 32 
+                             C 72 20, 58 16, 50 16 Z" 
+                          fill="none" stroke="url(#navToothGrad)" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round" />
+                    
+                    <!-- Front portion of 3D orbit ring (swooshing across front) -->
+                    <path d="M 12 58 C 8 68, 16 75, 30 76 C 48 78, 70 72, 88 58 C 96 52, 98 44, 90 38" fill="none" stroke="url(#navOrbitGrad)" stroke-width="6" stroke-linecap="round" />
+                </svg>
+
+                <!-- DENTOVA Name Stack -->
+                <div class="brand-text-stack">
+                    <div class="dentova-brand-title">
+                        DENTOV<span class="a-styled">A<span class="a-triangle"></span></span>
+                    </div>
+                    <div class="dentova-brand-subtitle">DENTAL SUPPLIES & EQUIPMENT</div>
+                </div>
+            </a>
+
+            <!-- Center: Dental Partner Tagline -->
+            <div class="navbar-middle-info">
+                <div class="dentova-partner-line">
+                    <span class="line-wing"></span>
+                    <span class="partner-text">Your Dental Partner</span>
+                    <span class="line-wing"></span>
+                </div>
+                <div class="dentova-ar-tagline">شريكك المعتمد في طب وجراحة الأسنان</div>
+            </div>
+
+            <!-- Left Actions: WhatsApp Direct + Cart Drawer Trigger -->
+            <div class="navbar-actions">
+                <a href="https://wa.me/201061232326" target="_blank" class="nav-action-btn btn-whatsapp-nav" title="تواصل عبر واتساب">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                    <span class="nav-btn-text">واتساب مباشر (01061232326)</span>
+                </a>
+                
+                <button class="nav-action-btn btn-cart-nav" onclick="toggleCartDrawer()" title="عرض السلة">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span>سلة الطلبيات</span>
+                    <span class="cart-badge-count" id="headerCartCount">0</span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="main-container">
+
+        <!-- Hero Welcome & Promise Banner -->
+        <section class="hero-banner">
+            <div class="hero-content">
+                <div class="hero-pill">
+                    <span>✨ Better Tools • Better Care • Together</span>
+                </div>
+                <h1 class="hero-title">قائمة أسعار وعروض <span class="highlight">DENTOVA</span> الخاصة</h1>
+                <p class="hero-desc">
+                    نوفر لأطبائنا الكرام والمراكز الطبية نخبة مستلزمات الأسنان المعتمدة بأفضل الأسعار المباشرة، مع نظام طلب فوري وحساب دقيق لإجمالي مشتريات العيادة.
+                </p>
+                <div class="doctor-quote-box">
+                    💡 <strong>رسالتنا لأطبائنا الأفاضل:</strong> دي أسعار تنافسية خاصة جداً تم انتقاؤها بعناية لخدمتكم.. اختر ما يلزم عيادتك بسهولة، وإذا وجدت سعراً أقل في أي ستور محترم فلك كامل الحق في الأفضل دائماً!
+                </div>
+                
+                <div class="hero-features-grid">
+                    <div class="hero-feature-item">
+                        <div class="feature-icon-bubble">⚡</div>
+                        <div>
+                            <div>توصيل وشحن سريع</div>
+                            <small style="color:#CBD5E1;">مباشرة لباب العيادة</small>
+                        </div>
+                    </div>
+                    <div class="hero-feature-item">
+                        <div class="feature-icon-bubble">🛡️</div>
+                        <div>
+                            <div>منتجات أصلية 100%</div>
+                            <small style="color:#CBD5E1;">معتمدة من كبرى الشركات</small>
+                        </div>
+                    </div>
+                    <div class="hero-feature-item">
+                        <div class="feature-icon-bubble">📋</div>
+                        <div>
+                            <div>عروض أسعار وفواتير</div>
+                            <small style="color:#CBD5E1;">طباعة وحفظ فوري</small>
+                        </div>
+                    </div>
+                    <div class="hero-feature-item">
+                        <div class="feature-icon-bubble">💬</div>
+                        <div>
+                            <div>طلب مباشر بالواتساب</div>
+                            <small style="color:#CBD5E1;">ضغطة واحدة لتأكيد الطلب</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search, Sort & Quick Filter Controls -->
+        <div class="controls-panel">
+            <div class="search-row">
+                <div class="search-box-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchInput" class="search-input" placeholder="ابحث عن اسم المنتج، الصنف، الماركة (مثال: بنج، كمبوزيت كيرر، كونترا، سيلر)..." onkeyup="filterProducts()">
+                    <button id="clearSearchBtn" class="search-clear-btn" onclick="clearSearch()">✕</button>
+                </div>
+
+                <select id="sortSelect" class="filter-select" onchange="filterProducts()">
+                    <option value="default">الترتيب الافتراضي</option>
+                    <option value="price-asc">السعر: من الأقل للأعلى</option>
+                    <option value="price-desc">السعر: من الأعلى للأقل</option>
+                    <option value="name-asc">أبجدياً (أ - ي)</option>
+                </select>
+            </div>
+
+            <!-- Sticky Category Navigation Pills -->
+            <div class="category-pills-bar" id="categoryPillsContainer">
+                <button class="category-pill active" onclick="selectCategory('all', this)">
+                    <span>⭐ جميع المنتجات</span>
+                    <span class="pill-count" id="allCountBadge">0</span>
+                </button>
+                <!-- Category buttons injected dynamically -->
+            </div>
+        </div>
+
+        <!-- No Results Box -->
+        <div id="noResultsBox" class="no-results-box">
+            <div class="no-results-icon">🔎</div>
+            <div class="no-results-title">لم نعثر على أي منتج يطابق بحثك</div>
+            <div class="no-results-desc">جرب كتابة اسم مختلف أو تصفح الأقسام من القائمة بالأعلى.</div>
+        </div>
+
+        <!-- Dynamic Product Sections Container -->
+        <main id="catalogContainer">
+            <!-- Rendered by JavaScript -->
+        </main>
+
+    </div>
+
+    <!-- Floating Persistent Cart Action Bar -->
+    <div class="floating-cart-bar" id="floatingCartBar">
+        <div class="floating-summary" onclick="toggleCartDrawer()" style="cursor:pointer;">
+            <div class="floating-cart-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                <span class="floating-cart-count" id="floatingCountBadge">0</span>
+            </div>
+            <div class="floating-info">
+                <span class="floating-total-label">إجمالي الطلبية المحددة:</span>
+                <span class="floating-total-val" id="floatingTotalVal">0 ج.م</span>
+            </div>
+        </div>
+        <div class="floating-actions">
+            <button class="btn-view-drawer" onclick="toggleCartDrawer()">
+                <span>عرض السلة</span>
+                <span id="floatingItemCountText">(0 صنف)</span>
+            </button>
+            <button class="btn-fast-whatsapp" onclick="checkoutWhatsApp()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                <span>إرسال الطلب واتساب</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Slide-Out Cart Drawer -->
+    <div class="drawer-overlay" id="drawerOverlay" onclick="toggleCartDrawer()"></div>
+    
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="drawer-header">
+            <div class="drawer-title-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <h3>سلة مستلزمات العيادة</h3>
+            </div>
+            <button class="drawer-close-btn" onclick="toggleCartDrawer()" title="إغلاق السلة">✕</button>
+        </div>
+
+        <div class="drawer-body" id="drawerBody">
+            <div id="drawerCartList">
+                <!-- Cart items rendered here -->
+            </div>
+
+            <!-- Doctor & Clinic Ordering Details -->
+            <div class="doctor-form-section" id="doctorFormBox">
+                <div class="form-section-header">
+                    <span>🩺 بيانات الطبيب / العيادة (اختياري لتوثيق الفاتورة):</span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="docName">اسم الطبيب / المركز الطبي</label>
+                    <input type="text" id="docName" class="form-input" placeholder="د. / مركز ...">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="docPhone">رقم هاتف التواصل</label>
+                    <input type="tel" id="docPhone" class="form-input" placeholder="01xxxxxxxxx">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="docAddress">المحافظة والعنوان / مكان العيادة</label>
+                    <input type="text" id="docAddress" class="form-input" placeholder="المدينة، الشارع، تفاصيل التوصيل">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="docNotes">ملاحظات إضافية على الطلب</label>
+                    <input type="text" id="docNotes" class="form-input" placeholder="أي درجات ألوان أو مقاسات خاصة...">
+                </div>
+            </div>
+        </div>
+
+        <div class="drawer-footer">
+            <div class="drawer-summary-row">
+                <span>عدد الأصناف المختارة:</span>
+                <strong id="drawerSummaryCount">0 صنف</strong>
+            </div>
+            <div class="drawer-total-row">
+                <span class="drawer-total-label">المبلغ الإجمالي:</span>
+                <span class="drawer-total-amount" id="drawerTotalVal">0 ج.م</span>
+            </div>
+            
+            <div class="drawer-actions-grid">
+                <button class="btn-drawer-whatsapp" onclick="checkoutWhatsApp()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                    <span>إرسال الطلبية كاملة عبر واتساب</span>
+                </button>
+                <div class="btn-drawer-secondary-row">
+                    <button class="btn-drawer-secondary" onclick="printInvoice()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                        <span>طباعة الفاتورة</span>
+                    </button>
+                    <button class="btn-drawer-secondary" onclick="copyOrderText()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <span>نسخ نص الطلب</span>
+                    </button>
+                </div>
+                <button class="btn-drawer-secondary btn-clear-cart" onclick="clearCart()">
+                    <span>🗑️ تفريغ السلة</span>
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Toast Popup Notification -->
+    <div class="toast-notification" id="toastBox">
+        <span id="toastIcon">✅</span>
+        <span id="toastMsg">تمت الإضافة بنجاح</span>
+    </div>
+
+    <!-- Hidden Printable Invoice Layout -->
+    <div id="invoicePrintArea">
+        <div style="text-align:center; border-bottom: 2px solid #0B2D5B; padding-bottom: 15px; margin-bottom: 20px;">
+            <h1 style="color:#0B2D5B; margin:0; font-family:'Montserrat', sans-serif;">DENTOVA</h1>
+            <h3 style="color:#0088CC; margin:5px 0;">DENTAL SUPPLIES & EQUIPMENT</h3>
+            <p style="margin:0; font-size:14px; color:#555;">عرض أسعار ومشتريات عيادة أسنان • هاتف: 01061232326</p>
+        </div>
+        
+        <div style="display:flex; justify-content:space-between; margin-bottom:20px; font-size:14px;">
+            <div>
+                <strong>بيانات الطبيب / العيادة:</strong><br>
+                <span id="printDocName">طبيب الأسنان</span><br>
+                <span id="printDocPhone"></span><br>
+                <span id="printDocAddress"></span>
+            </div>
+            <div style="text-align:left;">
+                <strong>تاريخ الطلب:</strong> <span id="printDate"></span><br>
+                <strong>رقم العرض:</strong> DTV-<span id="printRandomCode"></span>
+            </div>
+        </div>
+
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th>م</th>
+                    <th>اسم الصنف</th>
+                    <th>سعر الوحدة</th>
+                    <th>الكمية</th>
+                    <th>الإجمالي</th>
+                </tr>
+            </thead>
+            <tbody id="printInvoiceItems">
+                <!-- Rows injected before print -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="4" style="text-align:left; font-size:16px;">المبلغ الإجمالي المطلوب:</th>
+                    <th id="printTotalAmount" style="font-size:16px; color:#0B2D5B;">0 ج.م</th>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div style="margin-top:30px; font-size:13px; color:#666; border-top:1px solid #ccc; padding-top:10px;">
+            <p><strong>ملاحظات:</strong> الأسعار تشمل العروض الخاصة لشركة DENTOVA. للتأكيد أو الاستفسار يرجى التواصل على الواتساب 01061232326.</p>
+        </div>
+    </div>
+
+    <!-- Data & Script Logic -->
+    <script>
+        // Database of all Categories and Products from Store
+        const categories = [
+            {
+                id: "infection-disposables",
+                name: "التخدير والوقاية والأدوات الاستهلاكية",
+                nameEn: "PPE, Disposables & Anesthesia",
+                icon: "🛡️",
+                tag: "أساسيات العيادة"
+            },
+            {
+                id: "endodontics",
+                name: "علاج الجذور (Endodontics)",
+                nameEn: "Endodontic Rotary & Materials",
+                icon: "🔬",
+                tag: "إندو وتطهير"
+            },
+            {
+                id: "composites-restoration",
+                name: "الكمبوزيت والبوند وأدوات الحشو",
+                nameEn: "Composites, Bonding & Matrix",
+                icon: "🦷",
+                tag: "حشوات وتجميل"
+            },
+            {
+                id: "burs-polishing",
+                name: "البيرات وأدوات التلميع والفينيشينج",
+                nameEn: "Burs, Finishing & Polishing",
+                icon: "💎",
+                tag: "بيرات وتلميع"
+            },
+            {
+                id: "impression-glass",
+                name: "مواد الطبعات والجلاس أيونيمر",
+                nameEn: "Impression & Glass Ionomer",
+                icon: "🧪",
+                tag: "طبعات وسيمينت"
+            },
+            {
+                id: "prosthetics-rubberdam",
+                name: "التركيبات، السيمينت، والرابردام",
+                nameEn: "Prosthetics, Core & Rubber Dam",
+                icon: "⚙️",
+                tag: "عزل وتركيبات"
+            },
+            {
+                id: "surgery-instruments",
+                name: "الأدوية والأدوات الجراحية والعيادية",
+                nameEn: "Surgical & Diagnostic Tools",
+                icon: "🩺",
+                tag: "جراحة وفحص"
+            },
+            {
+                id: "orthodontics",
+                name: "مستلزمات وأدوات التقويم",
+                nameEn: "Orthodontic Materials",
+                icon: "🪥",
+                tag: "تقويم الأسنان"
+            },
+            {
+                id: "equipment-handpieces",
+                name: "الكونترات والأجهزة الطبيّة",
+                nameEn: "Handpieces & Clinical Units",
+                icon: "⚡",
+                tag: "أجهزة وكونترات"
+            }
+        ];
+
+        const products = [
+            // 1. Infection Control & Disposables
+            { id: 1, catId: "infection-disposables", name: "بنج أزرق", price: 870, tag: "أصلي" },
+            { id: 2, catId: "infection-disposables", name: "بنج ارتفارما", price: 970, tag: "أصلي" },
+            { id: 3, catId: "infection-disposables", name: "سيرنج الانسيزيا", price: 145, tag: "ستانلس" },
+            { id: 4, catId: "infection-disposables", name: "بنج جل أو سبراي", price: 60, tag: "موضعي" },
+            { id: 5, catId: "infection-disposables", name: "نيدلز", price: 185, tag: "علبة كاملة" },
+            { id: 6, catId: "infection-disposables", name: "جلفزات لاتكس", price: 180, tag: "جودة عالية" },
+            { id: 7, catId: "infection-disposables", name: "أوڤر جلفز", price: 8, tag: "اقتصادي" },
+            { id: 8, catId: "infection-disposables", name: "عمود الكبايات", price: 22.5, tag: "مستلزمات" },
+            { id: 9, catId: "infection-disposables", name: "باكيت المناديل", price: 25, tag: "استهلاكي" },
+            { id: 10, catId: "infection-disposables", name: "ماسكات", price: 35, tag: "3 طبقات" },
+            { id: 11, catId: "infection-disposables", name: "كيسة الساكشن", price: 100, tag: "شفط ممتاز" },
+            { id: 12, catId: "infection-disposables", name: "النابكن البلاستيك", price: 35, tag: "مقاوم للسوائل" },
+            { id: 13, catId: "infection-disposables", name: "عبوة الشاش المعقم الكبيرة", price: 38, tag: "معقم" },
+            { id: 14, catId: "infection-disposables", name: "النابكن المستورد ال٣ طبقات", price: 68, tag: "مستورد" },
+            { id: 15, catId: "infection-disposables", name: "النابكن هولدر", price: 15, tag: "مسكة نابكن" },
+            { id: 16, catId: "infection-disposables", name: "تيبات المية والهوا الستانلس الاوتوكلتڤابل", price: 30, tag: "أوتوكلاف" },
+            { id: 17, catId: "infection-disposables", name: "كيسة تيبات المية والهوا الكبيرة (250 قطعة)", price: 250, tag: "250 قطعة" },
+            { id: 18, catId: "infection-disposables", name: "كرتونة نيدلز إيريجيشن ٣سم لوك", price: 135, tag: "إيريجيشن" },
+            { id: 19, catId: "infection-disposables", name: "علبة ال100Side-vented needl", price: 250, tag: "100 إبرة" },
+            { id: 20, catId: "infection-disposables", name: "باكيت القطن رول الكبير", price: 140, tag: "قطن طبي" },
+            { id: 21, catId: "infection-disposables", name: "كيسة قطن المحلة الكبيرة", price: 95, tag: "نقي" },
+            { id: 22, catId: "infection-disposables", name: "الجاونات", price: 12, tag: "وقاية" },
+            { id: 23, catId: "infection-disposables", name: "١ لتر كحول", price: 45, tag: "تعقيم 70%" },
+
+            // 2. Endodontics
+            { id: 24, catId: "endodontics", name: "بيبربوينت عادية و تيبر", price: 85, tag: "امتصاص عالي" },
+            { id: 25, catId: "endodontics", name: "جاتابركا صيني عادية و تيبر", price: 80, tag: "تيبر وعادي" },
+            { id: 26, catId: "endodontics", name: "جاتابركا ميتا العادية", price: 100, tag: "Meta Biomed" },
+            { id: 27, catId: "endodontics", name: "جاتابركا ميتا التيبر", price: 130, tag: "Meta Biomed" },
+            { id: 28, catId: "endodontics", name: "جاتابركا سولڤنت Carven", price: 85, tag: "مذيب جاتا" },
+            { id: 29, catId: "endodontics", name: "الفايلات المانيوال العادية", price: 65, tag: "ستانلس" },
+            { id: 30, catId: "endodontics", name: "الفايلات المانيوال اللونج", price: 75, tag: "Long files" },
+            { id: 31, catId: "endodontics", name: "الفايلات المانيوال السبريدر", price: 60, tag: "Spreader" },
+            { id: 32, catId: "endodontics", name: "البيرهولدر Citizen", price: 80, tag: "حامل بيرات" },
+            { id: 33, catId: "endodontics", name: "علبة البيرات والفايل هولدر Rootex", price: 140, tag: "Rootex" },
+            { id: 34, catId: "endodontics", name: "مسطرة اندو Endo Ruller", price: 20, tag: "قياس دقيق" },
+            { id: 35, catId: "endodontics", name: "كيت فايلات روتاري M.pro", price: 250, tag: "الأكثر طلباً" },
+            { id: 36, catId: "endodontics", name: "كيت فايلات روتاري ڤيديا الكبير", price: 280, tag: "Vedia" },
+            { id: 37, catId: "endodontics", name: "كيت فايلات بيبسي جولد", price: 280, tag: "Gold Heat" },
+            { id: 38, catId: "endodontics", name: "كيت فايلات روتاري ام برو جولد", price: 310, tag: "M-Pro Gold" },
+            { id: 39, catId: "endodontics", name: "كيت فايلات روتاري E.flex بلو أو جولد", price: 340, tag: "E-Flex" },
+            { id: 40, catId: "endodontics", name: "إيريجيشن سلاين/صوديوم هيبو/كلوروهيكسيدين", price: 30, tag: "محلول غسيل" },
+            { id: 41, catId: "endodontics", name: "أيديتا جل EDTA Gel", price: 70, tag: "تشحيم قنوات" },
+            { id: 42, catId: "endodontics", name: "أيديتا سوليوشن EDTA Solution", price: 85, tag: "تطهير" },
+            { id: 43, catId: "endodontics", name: "السيلر أدسيل Adseal", price: 800, tag: "Meta Biomed" },
+            { id: 44, catId: "endodontics", name: "السيلر زيكال اوتوميكس Zical", price: 520, tag: "Automix" },
+            { id: 45, catId: "endodontics", name: "السيلر Vioseal spident", price: 685, tag: "Spident كوري" },
+            { id: 46, catId: "endodontics", name: "السيلر Anyseal", price: 710, tag: "كوري أصلي" },
+            { id: 47, catId: "endodontics", name: "سيلر ديابروسيل Diaproseal", price: 1170, tag: "جودة بريميوم" },
+            { id: 48, catId: "endodontics", name: "ميتابكس أو ميتابيست الكوري", price: 525, tag: "كوري أصلي" },
+            { id: 49, catId: "endodontics", name: "بيست أو بيكس شركة plus", price: 130, tag: "Plus" },
+            { id: 50, catId: "endodontics", name: "الCalcipex والCalcipaste", price: 130, tag: "كالسيوم هيدروكسيد" },
+            { id: 51, catId: "endodontics", name: "عبوة الMTA المصري (يبان بالأشعة)", price: 45, tag: "Radiopaque" },
+            { id: 52, catId: "endodontics", name: "علبة الMTA jk (3 عبوات)", price: 115, tag: "3 عبوات" },
+            { id: 53, catId: "endodontics", name: "سرنجة MTA putty الكوري OneFill (1/2G)", price: 490, tag: "OneFill نصف جرام" },
+            { id: 54, catId: "endodontics", name: "بيوسيراميك N Root SP (1/2G)", price: 470, tag: "Bioceramic" },
+            { id: 55, catId: "endodontics", name: "بيوسيراميك Well Root (1/2G)", price: 850, tag: "Well-Root" },
+            { id: 56, catId: "endodontics", name: "بيوسيراميك N Root SP (2G)", price: 1540, tag: "2 جرام" },
+            { id: 57, catId: "endodontics", name: "بيوسيراميك OneFill الكوري", price: 1760, tag: "OneFill بريميوم" },
+            { id: 58, catId: "endodontics", name: "بيوسيراميك Ceraseal ميتا (1/2G)", price: 1015, tag: "Meta CeraSeal" },
+            { id: 59, catId: "endodontics", name: "بيوسيراميك Ceraseal ميتا (2G)", price: 2025, tag: "Meta CeraSeal 2G" },
+
+            // 3. Restorative & Composites
+            { id: 60, catId: "composites-restoration", name: "الحشو المؤقت", price: 90, tag: "مؤقت" },
+            { id: 61, catId: "composites-restoration", name: "حشو مؤقت T.fill", price: 155, tag: "T-Fill" },
+            { id: 62, catId: "composites-restoration", name: "حشو مؤقت PSP الانجليزي", price: 165, tag: "إنجليزي" },
+            { id: 63, catId: "composites-restoration", name: "حشو مؤقت orafill هندي", price: 185, tag: "هندي أصلي" },
+            { id: 64, catId: "composites-restoration", name: "فرش البوند Microbrush", price: 45, tag: "علبة فرش" },
+            { id: 65, catId: "composites-restoration", name: "اسد ايتش chem", price: 50, tag: "حمض تخريش" },
+            { id: 66, catId: "composites-restoration", name: "اسد ايتش plus", price: 60, tag: "Plus" },
+            { id: 67, catId: "composites-restoration", name: "اسد ايتش كيرر Kerr", price: 80, tag: "Kerr USA" },
+            { id: 68, catId: "composites-restoration", name: "اسد ايتش تيترك أن Tetric", price: 100, tag: "Ivoclar" },
+            { id: 69, catId: "composites-restoration", name: "اسد ايتش كولتين Coltene", price: 80, tag: "Coltene" },
+            { id: 70, catId: "composites-restoration", name: "ايتش Te.com", price: 120, tag: "Te-Com" },
+            { id: 71, catId: "composites-restoration", name: "ايتش ميجا Mega", price: 85, tag: "Mega" },
+            { id: 72, catId: "composites-restoration", name: "ايتش ميتا Meta", price: 90, tag: "Meta Biomed" },
+            { id: 73, catId: "composites-restoration", name: "تيبات الأسد ايتش أو الفلوابل", price: 1, tag: "قطعة واحدة" },
+            { id: 74, catId: "composites-restoration", name: "فلوابل ماكس فيبر / Hi.fill / Elite", price: 120, tag: "Flowable" },
+            { id: 75, catId: "composites-restoration", name: "فلوابل ألفا Alpha", price: 190, tag: "Alpha Flow" },
+            { id: 76, catId: "composites-restoration", name: "فلوابل روبي Ruby", price: 185, tag: "Ruby Flow" },
+            { id: 77, catId: "composites-restoration", name: "فلوابل كلارا Clara", price: 200, tag: "Clara Flow" },
+            { id: 78, catId: "composites-restoration", name: "فلوابل Te.com", price: 240, tag: "Te-Com" },
+            { id: 79, catId: "composites-restoration", name: "فلوابل D.fill", price: 250, tag: "D-Fill" },
+            { id: 80, catId: "composites-restoration", name: "فلوابل Dia fill / نوڤا / سبايدنت", price: 260, tag: "كوري ممتاز" },
+            { id: 81, catId: "composites-restoration", name: "فلوابل ميتا Meta", price: 265, tag: "Meta Biomed" },
+            { id: 82, catId: "composites-restoration", name: "فلوابل بلك فيل Bulk Fill", price: 350, tag: "Bulk Fill" },
+            { id: 83, catId: "composites-restoration", name: "كبسولات فلوابل بلك فيل Dentsply", price: 190, tag: "Dentsply" },
+            { id: 84, catId: "composites-restoration", name: "أدوات الكمبوزيت Plastic instrument", price: 35, tag: "تشكيل حشو" },
+            { id: 85, catId: "composites-restoration", name: "أدوات كمبوزيت نوع Dream", price: 40, tag: "Dream" },
+            { id: 86, catId: "composites-restoration", name: "كيت أدوات كمبوزيت pk tomath", price: 200, tag: "كيت متكامل" },
+            { id: 87, catId: "composites-restoration", name: "الويدجات الخشب Wooden Wedges", price: 110, tag: "خشب طبي" },
+            { id: 88, catId: "composites-restoration", name: "الويدجات البلاستيك Plastic Wedges", price: 100, tag: "بلاستيك" },
+            { id: 89, catId: "composites-restoration", name: "رينج مستورد حجم كبير", price: 120, tag: "Ring كبير" },
+            { id: 90, catId: "composites-restoration", name: "كيسة الباندات توفليمير المقطعة", price: 9, tag: "Tofflemire" },
+            { id: 91, catId: "composites-restoration", name: "التوفليمير ماتريكس Matrix Retainer", price: 100, tag: "ريتينر" },
+            { id: 92, catId: "composites-restoration", name: "ماتريكس باند رول Matrix Roll", price: 45, tag: "رول كامل" },
+            { id: 93, catId: "composites-restoration", name: "الباندات السيليلويد celluloid strips", price: 10, tag: "شفاف أمامي" },
+            { id: 94, catId: "composites-restoration", name: "سيكشنال ماتريكس كيت Sectional Matrix", price: 130, tag: "Sectional Kit" },
+            { id: 95, catId: "composites-restoration", name: "سادل ماتريكس كيت Saddle Matrix", price: 230, tag: "Saddle Kit" },
+            { id: 96, catId: "composites-restoration", name: "100 Resin Ring", price: 100, tag: "100 رينج" },
+            { id: 97, catId: "composites-restoration", name: "Spoon matrix أو Twin matrix", price: 172, tag: "Twin Matrix" },
+            { id: 98, catId: "composites-restoration", name: "Saddle matrix refill", price: 210, tag: "ريفل سادل" },
+            { id: 99, catId: "composites-restoration", name: "كمبوزيت ألفا Alpha", price: 170, tag: "اقتصادي ممتاز" },
+            { id: 100, catId: "composites-restoration", name: "كمبوزيت روبي Ruby", price: 175, tag: "Ruby" },
+            { id: 101, catId: "composites-restoration", name: "كمبوزيت كلارا Clara", price: 180, tag: "تركي" },
+            { id: 102, catId: "composites-restoration", name: "كمبوزيت برايم دنت PrimeDent", price: 185, tag: "Prime-Dent" },
+            { id: 103, catId: "composites-restoration", name: "كمبوزيت ميتا Meta", price: 275, tag: "Meta Biomed" },
+            { id: 104, catId: "composites-restoration", name: "كمبوزيت هان Han", price: 285, tag: "Han" },
+            { id: 105, catId: "composites-restoration", name: "كمبوزيت Dia fill", price: 330, tag: "Dia-Dent" },
+            { id: 106, catId: "composites-restoration", name: "كمبوزيت i.light", price: 350, tag: "I-Light" },
+            { id: 107, catId: "composites-restoration", name: "كمبوزيت Dolgunn / Magma", price: 375, tag: "تركي فاخر" },
+            { id: 108, catId: "composites-restoration", name: "كمبوزيت Cavex", price: 440, tag: "هولندي" },
+            { id: 109, catId: "composites-restoration", name: "كمبوزيت سباي دنت spident", price: 445, tag: "كوري أصلي" },
+            { id: 110, catId: "composites-restoration", name: "كمبوزيت Di.fill", price: 500, tag: "Di-Fill" },
+            { id: 111, catId: "composites-restoration", name: "كمبوزيت نوڤا Nova", price: 550, tag: "Nova" },
+            { id: 112, catId: "composites-restoration", name: "كمبوزيت كيرر kerr Herculite", price: 600, tag: "Kerr USA" },
+            { id: 113, catId: "composites-restoration", name: "كمبوزيت Den fill الكوري", price: 650, tag: "Den-Fill كوري" },
+            { id: 114, catId: "composites-restoration", name: "كمبوزيت كولتين Coltene NG", price: 700, tag: "Coltene سويسري" },
+            { id: 115, catId: "composites-restoration", name: "كمبوزيت أيتينا itena", price: 790, tag: "Itena فرنسي" },
+            { id: 116, catId: "composites-restoration", name: "كمبوزيت شوفو Shofu Beautifil", price: 965, tag: "ياباني فاخر" },
+            { id: 117, catId: "composites-restoration", name: "كمبوزيت ألفا توكوياما Tokuyama", price: 990, tag: "Estelite ياباني" },
+            { id: 118, catId: "composites-restoration", name: "كمبوزيت كولتين Everglow", price: 1190, tag: "Brilliant سويسري" },
+            { id: 119, catId: "composites-restoration", name: "كمبوزيت تيترك أن سيرام Tetric N-Ceram", price: 1340, tag: "Ivoclar Vivadent" },
+            { id: 120, catId: "composites-restoration", name: "كمبوزيت Voco NHT", price: 1450, tag: "Voco ألماني" },
+            { id: 121, catId: "composites-restoration", name: "كيت كمبوزيت كبيرة اقتصادي", price: 1400, tag: "مجموعة شاملة" },
+            { id: 122, catId: "composites-restoration", name: "كيت كمبوزيت ماستر دنت بالبوند", price: 1480, tag: "Master-Dent Kit" },
+            { id: 123, catId: "composites-restoration", name: "كيت كمبوزيت كيرر Kerr Kit", price: 2980, tag: "Kerr بريميوم" },
+            { id: 124, catId: "composites-restoration", name: "بوند تركي Clara Bond", price: 395, tag: "تركي" },
+            { id: 125, catId: "composites-restoration", name: "بوند Meta / Any 5ml كوري", price: 500, tag: "كوري 5ml" },
+            { id: 126, catId: "composites-restoration", name: "بوند كولتين 5ml OneCoat", price: 700, tag: "Coltene 5ml" },
+            { id: 127, catId: "composites-restoration", name: "بوند Dolgunn 5ml التركي", price: 725, tag: "تركي 5ml" },
+            { id: 128, catId: "composites-restoration", name: "بوند ألترا Ultra 6 ml", price: 775, tag: "Ultra 6ml" },
+            { id: 129, catId: "composites-restoration", name: "توكوياما ١مللي يونيفرسال Tokuyama", price: 790, tag: "ياباني أصلي" },
+            { id: 130, catId: "composites-restoration", name: "بيسكو الكبير الأصلي Bisco All-Bond", price: 2300, tag: "Bisco Universal" },
+
+            // 4. Burs, Finishing & Polishing
+            { id: 131, catId: "burs-polishing", name: "البيرات الهاي سبيد المستوردة", price: 8, tag: "مستوردة" },
+            { id: 132, catId: "burs-polishing", name: "بيرات الهاي سبيد العادية", price: 8.5, tag: "High-Speed" },
+            { id: 133, catId: "burs-polishing", name: "بيرات كاربيد Carbide Burs", price: 30, tag: "كاربيد صلب" },
+            { id: 134, catId: "burs-polishing", name: "بيرات اندو Z Endo-Z", price: 45.5, tag: "فتح حجرة اللب" },
+            { id: 135, catId: "burs-polishing", name: "بيرات سيرجيكال عالية الصلابة", price: 45.5, tag: "جراحية" },
+            { id: 136, catId: "burs-polishing", name: "اللونج شانك بير Long Shank", price: 30, tag: "طويل" },
+            { id: 137, catId: "burs-polishing", name: "Crown cutter / Transmetal burr", price: 80, tag: "قص الكراون" },
+            { id: 138, catId: "burs-polishing", name: "الفينيشبنج ستريبس Torvm Finishing Strips", price: 85, tag: "Tor VM" },
+            { id: 139, catId: "burs-polishing", name: "الفينيشينج discs ديسكات تنعيم", price: 155, tag: "Finishing Discs" },
+            { id: 140, catId: "burs-polishing", name: "كيت كيندا الفينيشينج Kenda Polish Kit", price: 170, tag: "Kenda" },
+            { id: 141, catId: "burs-polishing", name: "علبة فرش التلميع النيلون (100 حبة)", price: 145, tag: "100 فرشاة" },
+            { id: 142, catId: "burs-polishing", name: "معجون تلميع الأسنان (علبة كاملة)", price: 90, tag: "Prophy Paste" },
+            { id: 143, catId: "burs-polishing", name: "معجون تلميع الأسنان (كبسولة فردية)", price: 9, tag: "كبسولة" },
+            { id: 144, catId: "burs-polishing", name: "معجون تلميع Aluminium oxide", price: 70, tag: "أكسيد ألومنيوم" },
+            { id: 145, catId: "burs-polishing", name: "معجون تلميع حشوات الاملجم", price: 45, tag: "أملجم" },
+            { id: 146, catId: "burs-polishing", name: "بيرات التلميع البيضا الهاي سبيد", price: 22, tag: "تلميع أبيض" },
+            { id: 147, catId: "burs-polishing", name: "فرش التلميع الكتان", price: 5.5, tag: "كتان" },
+            { id: 148, catId: "burs-polishing", name: "فرش التلميع النايلون", price: 2.5, tag: "نايلون" },
+            { id: 149, catId: "burs-polishing", name: "رابر كب التلميع Rubber Cup", price: 3.5, tag: "Rubber Cup" },
+
+            // 5. Impression & Glass Ionomer
+            { id: 150, catId: "impression-glass", name: "علبة Articulating papers (12 مجموعة)", price: 140, tag: "12 دفتر" },
+            { id: 151, catId: "impression-glass", name: "علبة pink Wax الكبيرة", price: 200, tag: "شمع بينك كبير" },
+            { id: 152, catId: "impression-glass", name: "التورش + الغاز هدية", price: 140, tag: "عرض خاص" },
+            { id: 153, catId: "impression-glass", name: "تراي الإمبرشن الستانلس النضيفة", price: 10, tag: "ستانلس" },
+            { id: 154, catId: "impression-glass", name: "التراي البلاستيك الألوان Standard", price: 15, tag: "ألوان" },
+            { id: 155, catId: "impression-glass", name: "الرابرباول + السباتيولا Rubber Bowl", price: 25, tag: "خلط" },
+            { id: 156, catId: "impression-glass", name: "كيس الألجنيت", price: 160, tag: "طبعة دقيقة" },
+            { id: 157, catId: "impression-glass", name: "الألجنيت الصيني", price: 140, tag: "اقتصادي" },
+            { id: 158, catId: "impression-glass", name: "الألجنيت IQ", price: 155, tag: "IQ Alginate" },
+            { id: 159, catId: "impression-glass", name: "ألجنيت Hygedent", price: 175, tag: "Hygedent" },
+            { id: 160, catId: "impression-glass", name: "ألجنيت BMS إيطالي", price: 210, tag: "BMS إيطالي" },
+            { id: 161, catId: "impression-glass", name: "ألجنيت Zetalgin زيتاجين", price: 265, tag: "Zhermack" },
+            { id: 162, catId: "impression-glass", name: "ألجنيت Biokalgin", price: 365, tag: "فاخر" },
+            { id: 163, catId: "impression-glass", name: "ألجنيت تروبيكالجين Tropicalgin", price: 430, tag: "Zhermack الأصلي" },
+            { id: 164, catId: "impression-glass", name: "ألجنيت Cavex كافكس", price: 445, tag: "Cavex هولندي" },
+            { id: 165, catId: "impression-glass", name: "الجلاس ايونيمر الصيني", price: 90, tag: "اقتصادي" },
+            { id: 166, catId: "impression-glass", name: "الجلاس ايونيمر الهندي ultracem", price: 130, tag: "Ultracem" },
+            { id: 167, catId: "impression-glass", name: "GI luting / GI fill الهندي", price: 365, tag: "حشو ولصق" },
+            { id: 168, catId: "impression-glass", name: "الجلاس ايونيمر الأمريكي Ceram", price: 425, tag: "أمريكي" },
+            { id: 169, catId: "impression-glass", name: "جلاس ايونيمر برازيلي Brazil", price: 440, tag: "برازيلي" },
+            { id: 170, catId: "impression-glass", name: "جلاس ايونيمر Micron1 / Micron 2", price: 510, tag: "Micron" },
+            { id: 171, catId: "impression-glass", name: "زينك بولي كربوكسيليت Carbofin", price: 695, tag: "Carbofin" },
+            { id: 172, catId: "impression-glass", name: "كبسولات الريڤا السيلف SDI Riva Self", price: 118, tag: "Riva كبسول" },
+            { id: 173, catId: "impression-glass", name: "كبسولات الريڤا اللايت SDI Riva Light", price: 125, tag: "Riva Light" },
+            { id: 174, catId: "impression-glass", name: "كبسولات فيوجي Fuji 9 extra GC", price: 130, tag: "GC Fuji 9" },
+            { id: 175, catId: "impression-glass", name: "الجلاس ايونيمر BMS الازرق الكبير", price: 1540, tag: "BMS إيطالي كبير" },
+            { id: 176, catId: "impression-glass", name: "الجلاس ايونيمر كومروجلاس الكبير", price: 1545, tag: "Comroglass" },
+            { id: 177, catId: "impression-glass", name: "سيمينت الميديسيم Medicept", price: 1630, tag: "Medicept بريطاني" },
+            { id: 178, catId: "impression-glass", name: "كيت رابربيز سيلاكسيل الصغيرة Silaxil", price: 710, tag: "Silaxil C-Silicone" },
+            { id: 179, catId: "impression-glass", name: "كيت رابربيز زيتابلس الصغيرة Zetaplus", price: 780, tag: "Zhermack زيتابلس" },
+            { id: 180, catId: "impression-glass", name: "بطي رابربيز سيلاكسيل Silaxil Putty", price: 890, tag: "Putty" },
+            { id: 181, catId: "impression-glass", name: "بطي رابربيز زيتابلس Zetaplus Putty", price: 905, tag: "Zhermack Putty" },
+            { id: 182, catId: "impression-glass", name: "كاتاليست زيتابلس الكبيرة Catalyst", price: 495, tag: "Indurent Gel" },
+            { id: 183, catId: "impression-glass", name: "لايت زيتابلس الكبيرة Oranwash", price: 550, tag: "Light Body" },
+            { id: 184, catId: "impression-glass", name: "كيت رابربيز Addition Mac الكبيرة", price: 1225, tag: "A-Silicone" },
+            { id: 185, catId: "impression-glass", name: "مسدس الرابربيز Dispenser Gun", price: 295, tag: "مسدس حقن" },
+            { id: 186, catId: "impression-glass", name: "كيت رابربيز سيلاكسيل الكبيرة", price: 1980, tag: "كيت كاملة كبيرة" },
+            { id: 187, catId: "impression-glass", name: "كيت رابربيز زيتابلس الكبيرة Zhermack", price: 2040, tag: "زيتابلس كبيرة كاملة" },
+
+            // 6. Prosthetics & Rubber Dam
+            { id: 188, catId: "prosthetics-rubberdam", name: "شارم كور الكوري CharmCore", price: 800, tag: "كوري أصلي" },
+            { id: 189, catId: "prosthetics-rubberdam", name: "Dolgunn Core التركي", price: 625, tag: "بناء دعامات" },
+            { id: 190, catId: "prosthetics-rubberdam", name: "Any-Core الكوري", price: 660, tag: "Any-Core" },
+            { id: 191, catId: "prosthetics-rubberdam", name: "Nexocore ميتا الكوري Meta", price: 790, tag: "Meta Biomed" },
+            { id: 192, catId: "prosthetics-rubberdam", name: "تيمبريري كراون Dolgunn Temp Crown", price: 650, tag: "تيجان مؤقتة" },
+            { id: 193, catId: "prosthetics-rubberdam", name: "Non-Eugenol temporary (شارم/كيڤيكس)", price: 800, tag: "لصق مؤقت" },
+            { id: 194, catId: "prosthetics-rubberdam", name: "الريزن سيمنت Supercem Resin Cement", price: 1100, tag: "سيمينت ريزن" },
+            { id: 195, catId: "prosthetics-rubberdam", name: "شيت الرابردام الواحد Rubber Dam Sheet", price: 10, tag: "قطعة واحدة" },
+            { id: 196, catId: "prosthetics-rubberdam", name: "الكلامب الباكستاني المستورد Clamp", price: 28, tag: "كلامب سن" },
+            { id: 197, catId: "prosthetics-rubberdam", name: "ريتراكتور Citizen Retractor", price: 30, tag: "فتاحة فم" },
+            { id: 198, catId: "prosthetics-rubberdam", name: "الرابردام template الورق", price: 8, tag: "تحديد مقاسات" },
+            { id: 199, catId: "prosthetics-rubberdam", name: "الرابردام template المعدن", price: 40, tag: "معدن دائم" },
+            { id: 200, catId: "prosthetics-rubberdam", name: "الفريم رابردام Metal / Plastic", price: 45, tag: "إطار عزل" },
+            { id: 201, catId: "prosthetics-rubberdam", name: "الدنتال فلوس Dental Floss", price: 40, tag: "خيط أسنان" },
+            { id: 202, catId: "prosthetics-rubberdam", name: "retraction cord خيط تراجع لثة", price: 104, tag: "سلك لثة" },
+            { id: 203, catId: "prosthetics-rubberdam", name: "الليكويدام Liquid Dam", price: 125, tag: "حاجز ضوئي" },
+            { id: 204, catId: "prosthetics-rubberdam", name: "الكلامب هولدر Clamp holder", price: 290, tag: "ماسك كلامبات" },
+            { id: 205, catId: "prosthetics-rubberdam", name: "الرابردام بانشر Puncher", price: 385, tag: "خرامة رابردام" },
+            { id: 206, catId: "prosthetics-rubberdam", name: "علبة شيتات Dura Dam / Puritex / CEYFLEX", price: 290, tag: "علبة كاملة" },
+            { id: 207, catId: "prosthetics-rubberdam", name: "علبة شيتات Flamingo", price: 350, tag: "Flamingo" },
+            { id: 208, catId: "prosthetics-rubberdam", name: "علبة شيتات Secuntary", price: 335, tag: "عزل محكم" },
+            { id: 209, catId: "prosthetics-rubberdam", name: "علبة شيتات Secuntary Silk Blue", price: 455, tag: "سيلك بلو فاخر" },
+
+            // 7. Surgery & Clinical Instruments
+            { id: 210, catId: "surgery-instruments", name: "فورماكريزول / زينك أوكسيد / إيجينول", price: 55, tag: "علاجات دوائية" },
+            { id: 211, catId: "surgery-instruments", name: "كالسيوم أوكسيد Calcium Oxide", price: 55, tag: "دوائي" },
+            { id: 212, catId: "surgery-instruments", name: "عبوة فلورايد ڤارنش Varnish jk", price: 85, tag: "فلورايد وقائي" },
+            { id: 213, catId: "surgery-instruments", name: "charm varnish فلورايد كوري", price: 70, tag: "Charm" },
+            { id: 214, catId: "surgery-instruments", name: "ألڤيوجل للDry socket (Alveogyl)", price: 90, tag: "تسكين جراحي" },
+            { id: 215, catId: "surgery-instruments", name: "هيموستوب أو هيموستال Hemostop", price: 85, tag: "وقف نزيف" },
+            { id: 216, catId: "surgery-instruments", name: "الميرور هيد Mirror Head", price: 9, tag: "رأس مرآة" },
+            { id: 217, catId: "surgery-instruments", name: "يد الميرور البلاستيك اوتوكلافابل", price: 11, tag: "أوتوكلاف" },
+            { id: 218, catId: "surgery-instruments", name: "يد الميرور الميتال اوتوكلافابل", price: 13, tag: "معدن" },
+            { id: 219, catId: "surgery-instruments", name: "مجموعة مرايات تصوير (3 قطع Photo Mirrors)", price: 200, tag: "3 قطع تصوير" },
+            { id: 220, catId: "surgery-instruments", name: "البروب العادي Diagnostic Probe", price: 26, tag: "فحص" },
+            { id: 221, catId: "surgery-instruments", name: "البروب الإندو Endo Probe", price: 30, tag: "إندو" },
+            { id: 222, catId: "surgery-instruments", name: "البروب البيريو graduated Perio Probe", price: 35, tag: "مدرج لثة" },
+            { id: 223, catId: "surgery-instruments", name: "الكارڤر / الكوندينسر / البيرنشر", price: 30, tag: "أداة تشكيل" },
+            { id: 224, catId: "surgery-instruments", name: "السيمنت سباتيولا + glass slab", price: 35, tag: "خلط وسلاب" },
+            { id: 225, catId: "surgery-instruments", name: "التويزر العادي Tweezer", price: 42, tag: "ملقاط طبي" },
+            { id: 226, catId: "surgery-instruments", name: "التويزر اللوك Locking Tweezer", price: 48, tag: "ملقاط بمحبس" },
+            { id: 227, catId: "surgery-instruments", name: "المقص الجراحي Surgical Scissors", price: 42, tag: "جراحة" },
+            { id: 228, catId: "surgery-instruments", name: "يد المشرط Scalpel Handle", price: 26, tag: "مقبض مشرط" },
+            { id: 229, catId: "surgery-instruments", name: "Bone file / Bone Currette", price: 75, tag: "كحت عظام" },
+            { id: 230, catId: "surgery-instruments", name: "النيدلز هولدر / موسكيتو Needle Holder", price: 90, tag: "خياطة جراحية" },
+            { id: 231, catId: "surgery-instruments", name: "الElevator رافع جذور", price: 105, tag: "خلع جراحي" },
+            { id: 232, catId: "surgery-instruments", name: "الforceps فورسبس خلع أسنان", price: 215, tag: "فورسبس ستانلس" },
+            { id: 233, catId: "surgery-instruments", name: "معقم لليد سائل Hand Sanitizer", price: 75, tag: "مطهر يدين" },
+            { id: 234, catId: "surgery-instruments", name: "معقم للأسطح Surface Disinfectant", price: 80, tag: "تطهير أسطح" },
+            { id: 235, catId: "surgery-instruments", name: "مطهر sidex lesoformin (كيس لـ 5 لتر)", price: 25, tag: "محلول تعقيم" },
+            { id: 236, catId: "surgery-instruments", name: "Scaler / Curette مانيوال للبريو", price: 26, tag: "تنظيف جير" },
+            { id: 237, catId: "surgery-instruments", name: "تيبات الالتراسونيك Ultrasonic Tips", price: 40, tag: "رأس سكيلر" },
+            { id: 238, catId: "surgery-instruments", name: "تيبات الاندو بيريو Endo-Perio Tips", price: 250, tag: "إندو وبيريو" },
+            { id: 239, catId: "surgery-instruments", name: "مفتاح السكيلر Torque Wrench", price: 65, tag: "مفتاح ربط" },
+
+            // 8. Orthodontics
+            { id: 240, catId: "orthodontics", name: "الوايرات النايطاي راوند NiTi Wires", price: 28, tag: "سلك مرن" },
+            { id: 241, catId: "orthodontics", name: "الوايرات الستانلس راوند SS Wires", price: 32, tag: "ستانلس" },
+            { id: 242, catId: "orthodontics", name: "الوايرات المضلعة Rectangular Wires", price: 34, tag: "سلك مستطيل" },
+            { id: 243, catId: "orthodontics", name: "البكال تيوب 6 Buccal Tube", price: 20, tag: "تيوب ضرس" },
+            { id: 244, catId: "orthodontics", name: "علبة شمع التقويم Ortho Wax", price: 12, tag: "شمع حماية" },
+            { id: 245, catId: "orthodontics", name: "شيت السترس Ortho stars", price: 12, tag: "سترس ألوان" },
+            { id: 246, catId: "orthodontics", name: "كيس إيلاستيك تقويم Elastics", price: 14, tag: "مطاط تقويم" },
+            { id: 247, catId: "orthodontics", name: "الأوبن كويل سبرنج Open Coil Spring", price: 35, tag: "سبرنج فتح مسافات" },
+            { id: 248, catId: "orthodontics", name: "الباورتشين Power Chain", price: 80, tag: "رول باور تشين" },
+            { id: 249, catId: "orthodontics", name: "كيس أوطاي حلقة صغيرة (40 قطعة Ligatures)", price: 45, tag: "40 قطعة" },
+            { id: 250, catId: "orthodontics", name: "كيس أوطاي حلقة واسعة (40 قطعة)", price: 125, tag: "حلقة واسعة" },
+            { id: 251, catId: "orthodontics", name: "حالة براكيت تقويم على كارت Brackets Card", price: 70, tag: "طقم كامل" },
+            { id: 252, catId: "orthodontics", name: "علبة براكيت تقويم مستوردة فرز أول", price: 75, tag: "فرز أول فاخر" },
+            { id: 253, catId: "orthodontics", name: "الBand removal بيلر فك الباندات", price: 135, tag: "بيلر فك" },
+            { id: 254, catId: "orthodontics", name: "الBand setter أداة تثبيت باند", price: 225, tag: "تثبيت" },
+            { id: 255, catId: "orthodontics", name: "الBand pusher أداة دفع الباند", price: 250, tag: "Pusher" },
+            { id: 256, catId: "orthodontics", name: "علبة باندات التقويم (80 قطعة Molar Bands)", price: 725, tag: "80 حبة مقاسات" },
+
+            // 9. Equipment & Handpieces
+            { id: 257, catId: "equipment-handpieces", name: "كونترا فيوتشر future key", price: 450, tag: "اقتصادي" },
+            { id: 258, catId: "equipment-handpieces", name: "كونترا Hay هاي سبيد", price: 950, tag: "Hay" },
+            { id: 259, catId: "equipment-handpieces", name: "كونترا Being key بينج", price: 1050, tag: "Being Foshan" },
+            { id: 260, catId: "equipment-handpieces", name: "كونترا Zero dent زيرو دنت", price: 1050, tag: "Zero-Dent" },
+            { id: 261, catId: "equipment-handpieces", name: "كونترا Tosi توزي الشهيرة", price: 1080, tag: "Tosi الأصلية" },
+            { id: 262, catId: "equipment-handpieces", name: "كونترا K&K عالية الأداء", price: 1100, tag: "K&K" },
+            { id: 263, catId: "equipment-handpieces", name: "كونترا Being push button بوش بوتون", price: 1300, tag: "Push Button" },
+            { id: 264, catId: "equipment-handpieces", name: "كونترا Nsk ياباني ستايل", price: 1400, tag: "Pana-Max" },
+            { id: 265, catId: "equipment-handpieces", name: "كونترا Apple أبل دنتال", price: 1600, tag: "Apple Dental" },
+            { id: 266, catId: "equipment-handpieces", name: "كونترا Coxo كوكسو الاحترافية", price: 1700, tag: "Coxo بريميوم" },
+            { id: 267, catId: "equipment-handpieces", name: "كونترا NSK الليد المضيئة كشاف", price: 1600, tag: "LED ذاتي الإضاءة" },
+            { id: 268, catId: "equipment-handpieces", name: "كونترا Tosi الليد التوربين الذكي", price: 1625, tag: "Tosi LED" },
+            { id: 269, catId: "equipment-handpieces", name: "كونترا لوسبيد Being لو سبيد كاملة", price: 850, tag: "Low-Speed Set" },
+            { id: 270, catId: "equipment-handpieces", name: "كونترا لوسبيد M.S محرك ولو سبيد", price: 900, tag: "M.S Set" },
+            { id: 271, catId: "equipment-handpieces", name: "الادابتور كبل وتوصيلات", price: 750, tag: "Adaptor" },
+            { id: 272, catId: "equipment-handpieces", name: "فيوتشر لو سبيد Future Low Speed", price: 1500, tag: "Future Set" },
+            { id: 273, catId: "equipment-handpieces", name: "زيت الكونترا الكبير المستورد Handpiece Spray", price: 120, tag: "سبراي تزييت" },
+            { id: 274, catId: "equipment-handpieces", name: "جهاز السكيلر لخلع الجير والموجات", price: 1950, tag: "وحدة سكيلر متكاملة" }
+        ];
+
+        // State variables
+        let cart = [];
+        let currentActiveCategory = 'all';
+
+        // Load Cart from LocalStorage
+        function initCart() {
+            try {
+                const saved = localStorage.getItem('dentova_cart');
+                if (saved) {
+                    cart = JSON.parse(saved);
+                }
+            } catch (e) {
+                console.error("Could not load cart from storage", e);
+            }
+            renderCategoryPills();
+            renderCatalog();
+            updateCartUI();
+        }
+
+        function saveCart() {
+            try {
+                localStorage.setItem('dentova_cart', JSON.stringify(cart));
+            } catch (e) {
+                console.error("Could not save cart", e);
+            }
+        }
+
+        // Render Category Pills
+        function renderCategoryPills() {
+            const container = document.getElementById('categoryPillsContainer');
+            document.getElementById('allCountBadge').innerText = products.length;
+            
+            categories.forEach(cat => {
+                const count = products.filter(p => p.catId === cat.id).length;
+                const btn = document.createElement('button');
+                btn.className = 'category-pill';
+                btn.onclick = () => selectCategory(cat.id, btn);
+                btn.innerHTML = `
+                    <span>${cat.icon} ${cat.name}</span>
+                    <span class="pill-count">${count}</span>
+                `;
+                container.appendChild(btn);
+            });
+        }
+
+        function selectCategory(catId, btnEl) {
+            currentActiveCategory = catId;
+            document.querySelectorAll('.category-pill').forEach(b => b.classList.remove('active'));
+            if (btnEl) btnEl.classList.add('active');
+            filterProducts();
+
+            if (catId !== 'all') {
+                const targetSec = document.getElementById(`sec-${catId}`);
+                if (targetSec) {
+                    targetSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        }
+
+        // Render Catalog Sections & Products
+        function renderCatalog() {
+            const container = document.getElementById('catalogContainer');
+            container.innerHTML = '';
+
+            categories.forEach(cat => {
+                const catProducts = products.filter(p => p.catId === cat.id);
+                if (catProducts.length === 0) return;
+
+                const sec = document.createElement('section');
+                sec.className = 'category-section';
+                sec.id = `sec-${cat.id}`;
+
+                sec.innerHTML = `
+                    <div class="section-header">
+                        <div class="section-title-wrap">
+                            <div class="section-icon">${cat.icon}</div>
+                            <div>
+                                <h2 class="section-title">${cat.name}</h2>
+                                <div class="section-subtitle-en">${cat.nameEn}</div>
+                            </div>
+                        </div>
+                        <span class="section-items-badge">${catProducts.length} صنف متاح</span>
+                    </div>
+                    <div class="products-grid" id="grid-${cat.id}"></div>
+                `;
+
+                container.appendChild(sec);
+                const grid = sec.querySelector(`#grid-${cat.id}`);
+
+                catProducts.forEach(prod => {
+                    const card = createProductCard(prod);
+                    grid.appendChild(card);
+                });
+            });
+        }
+
+        function createProductCard(prod) {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            card.id = `prod-card-${prod.id}`;
+            card.dataset.name = prod.name.toLowerCase();
+            card.dataset.price = prod.price;
+            card.dataset.cat = prod.catId;
+
+            const cartItem = cart.find(i => i.id === prod.id);
+            const inCart = !!cartItem;
+            if (inCart) card.classList.add('in-cart');
+
+            const qty = inCart ? cartItem.qty : 0;
+
+            card.innerHTML = `
+                <div>
+                    <div class="product-top-row">
+                        <span class="product-tag">${prod.tag || 'معتمد'}</span>
+                        <span style="font-size:0.75rem; color:#94A3B8; font-weight:600;">#${prod.id}</span>
+                    </div>
+                    <h3 class="product-title">${prod.name}</h3>
+                </div>
+                <div>
+                    <div class="product-bottom-row">
+                        <div class="price-box">
+                            <span class="price-label">السعر للوحدة:</span>
+                            <div class="price-val">
+                                <span>${prod.price}</span>
+                                <span class="price-currency">ج.م</span>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-add-cart" id="btn-add-${prod.id}" style="${inCart ? 'display:none;' : 'display:inline-flex;'}" onclick="addToCartById(${prod.id})">
+                                <span>+ إضافة</span>
+                            </button>
+                            <div class="card-qty-control ${inCart ? 'show' : ''}" id="qty-ctrl-${prod.id}">
+                                <button class="card-qty-btn" onclick="changeQtyById(${prod.id}, -1)">-</button>
+                                <span class="card-qty-val" id="qty-val-${prod.id}">${qty}</span>
+                                <button class="card-qty-btn" onclick="changeQtyById(${prod.id}, 1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            return card;
+        }
+
+        // Cart Operations
+        function addToCartById(id) {
+            const prod = products.find(p => p.id === id);
+            if (!prod) return;
+
+            const existing = cart.find(i => i.id === id);
+            if (existing) {
+                existing.qty++;
+            } else {
+                cart.push({ id: prod.id, name: prod.name, price: prod.price, qty: 1, catId: prod.catId });
+            }
+
+            saveCart();
+            updateProductCardUI(id);
+            updateCartUI();
+            showToast(`تمت إضافة "${prod.name}" إلى السلة`);
+        }
+
+        function changeQtyById(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (!item) return;
+
+            item.qty += delta;
+            if (item.qty <= 0) {
+                cart = cart.filter(i => i.id !== id);
+                showToast(`تم حذف الصنف من السلة`);
+            }
+
+            saveCart();
+            updateProductCardUI(id);
+            updateCartUI();
+        }
+
+        function updateProductCardUI(id) {
+            const card = document.getElementById(`prod-card-${id}`);
+            const btn = document.getElementById(`btn-add-${id}`);
+            const ctrl = document.getElementById(`qty-ctrl-${id}`);
+            const val = document.getElementById(`qty-val-${id}`);
+
+            if (!card) return;
+
+            const cartItem = cart.find(i => i.id === id);
+            if (cartItem && cartItem.qty > 0) {
+                card.classList.add('in-cart');
+                if (btn) btn.style.display = 'none';
+                if (ctrl) ctrl.classList.add('show');
+                if (val) val.innerText = cartItem.qty;
+            } else {
+                card.classList.remove('in-cart');
+                if (btn) btn.style.display = 'inline-flex';
+                if (ctrl) ctrl.classList.remove('show');
+            }
+        }
+
+        function clearCart() {
+            if (cart.length === 0) return;
+            if (confirm("هل أنت متأكد من تفريغ كافة محتويات سلة الطلبيات؟")) {
+                const oldCart = [...cart];
+                cart = [];
+                saveCart();
+                oldCart.forEach(i => updateProductCardUI(i.id));
+                updateCartUI();
+                showToast("تم تفريغ السلة بالكامل");
+            }
+        }
+
+        function updateCartUI() {
+            let totalCount = 0;
+            let totalPrice = 0;
+
+            const listContainer = document.getElementById('drawerCartList');
+            listContainer.innerHTML = '';
+
+            if (cart.length === 0) {
+                listContainer.innerHTML = `
+                    <div class="drawer-empty-cart">
+                        <div class="drawer-empty-icon">🛒</div>
+                        <h4 style="color:var(--dentova-navy); margin-bottom:6px; font-weight:800;">سلة المشتريات فارغة</h4>
+                        <p style="font-size:0.88rem; color:#64748B;">تصفح قائمة المستلزمات وأضف ما تحتاجه عيادتك الآن</p>
+                    </div>
+                `;
+            } else {
+                cart.forEach((item, index) => {
+                    totalCount += item.qty;
+                    const subtotal = item.price * item.qty;
+                    totalPrice += subtotal;
+
+                    const row = document.createElement('div');
+                    row.className = 'cart-item-card';
+                    row.innerHTML = `
+                        <div class="cart-item-details">
+                            <div class="cart-item-name">${index + 1}. ${item.name}</div>
+                            <div class="cart-item-calc">
+                                <span>${item.price} ج.م × ${item.qty} = </span>
+                                <span class="item-subtotal">${subtotal} ج.م</span>
+                            </div>
+                        </div>
+                        <div class="cart-item-actions">
+                            <button class="cart-drawer-qty-btn" onclick="changeQtyById(${item.id}, -1)">-</button>
+                            <span class="cart-drawer-qty-val">${item.qty}</span>
+                            <button class="cart-drawer-qty-btn" onclick="changeQtyById(${item.id}, 1)">+</button>
+                            <button class="cart-item-remove-btn" onclick="changeQtyById(${item.id}, -${item.qty})" title="حذف">🗑️</button>
+                        </div>
+                    `;
+                    listContainer.appendChild(row);
+                });
+            }
+
+            // Update Badges & Display
+            document.getElementById('headerCartCount').innerText = totalCount;
+            document.getElementById('floatingCountBadge').innerText = totalCount;
+            document.getElementById('floatingTotalVal').innerText = `${totalPrice.toLocaleString()} ج.م`;
+            document.getElementById('floatingItemCountText').innerText = `(${cart.length} صنف)`;
+            document.getElementById('drawerSummaryCount').innerText = `${cart.length} أصناف (${totalCount} قطعة)`;
+            document.getElementById('drawerTotalVal').innerText = `${totalPrice.toLocaleString()} ج.م`;
+        }
+
+        function toggleCartDrawer() {
+            const drawer = document.getElementById('cartDrawer');
+            const overlay = document.getElementById('drawerOverlay');
+            const isOpen = drawer.classList.contains('active');
+
+            if (isOpen) {
+                drawer.classList.remove('active');
+                overlay.classList.remove('active');
+            } else {
+                drawer.classList.add('active');
+                overlay.classList.add('active');
+            }
+        }
+
+        // Filtering & Search Engine
+        function filterProducts() {
+            const query = document.getElementById('searchInput').value.trim().toLowerCase();
+            const sortMode = document.getElementById('sortSelect').value;
+            const clearBtn = document.getElementById('clearSearchBtn');
+            clearBtn.style.display = query ? 'block' : 'none';
+
+            let totalVisible = 0;
+            const sections = document.querySelectorAll('.category-section');
+
+            sections.forEach(sec => {
+                const secCatId = sec.id.replace('sec-', '');
+                const grid = sec.querySelector('.products-grid');
+                const cards = Array.from(grid.querySelectorAll('.product-card'));
+                let visibleInSec = 0;
+
+                // Category filter check
+                const catMatch = (currentActiveCategory === 'all' || currentActiveCategory === secCatId);
+
+                cards.forEach(card => {
+                    const name = card.dataset.name;
+                    const matchesQuery = !query || name.includes(query);
+
+                    if (catMatch && matchesQuery) {
+                        card.style.display = 'flex';
+                        visibleInSec++;
+                        totalVisible++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Sorting visible cards
+                if (sortMode !== 'default') {
+                    cards.sort((a, b) => {
+                        const priceA = parseFloat(a.dataset.price);
+                        const priceB = parseFloat(b.dataset.price);
+                        const nameA = a.dataset.name;
+                        const nameB = b.dataset.name;
+
+                        if (sortMode === 'price-asc') return priceA - priceB;
+                        if (sortMode === 'price-desc') return priceB - priceA;
+                        if (sortMode === 'name-asc') return nameA.localeCompare(nameB, 'ar');
+                        return 0;
+                    });
+                    cards.forEach(c => grid.appendChild(c));
+                }
+
+                sec.style.display = (visibleInSec > 0) ? 'block' : 'none';
+            });
+
+            const noResults = document.getElementById('noResultsBox');
+            noResults.style.display = (totalVisible === 0) ? 'block' : 'none';
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            filterProducts();
+        }
+
+        // WhatsApp Checkout Builder
+        function checkoutWhatsApp() {
+            if (cart.length === 0) {
+                showToast("⚠️ برجاء إضافة مستلزمات إلى السلة أولاً!");
+                return;
+            }
+
+            const docName = document.getElementById('docName').value.trim() || 'طبيب أسنان';
+            const docPhone = document.getElementById('docPhone').value.trim();
+            const docAddress = document.getElementById('docAddress').value.trim();
+            const docNotes = document.getElementById('docNotes').value.trim();
+
+            let message = `*طلب مستلزمات عيادة أسنان - DENTOVA*\n`;
+            message += `------------------------------------\n`;
+            message += `👨‍⚕️ *الطبيب / العيادة:* ${docName}\n`;
+            if (docPhone) message += `📞 *هاتف للتواصل:* ${docPhone}\n`;
+            if (docAddress) message += `📍 *العنوان / المحافظة:* ${docAddress}\n`;
+            if (docNotes) message += `📝 *ملاحظات خاصة:* ${docNotes}\n`;
+            message += `📅 *تاريخ الطلب:* ${new Date().toLocaleDateString('ar-EG')}\n`;
+            message += `------------------------------------\n`;
+            message += `*قائمة الأصناف المطلوبة (${cart.length} صنف):*\n\n`;
+
+            let totalPrice = 0;
+            cart.forEach((item, index) => {
+                const subtotal = item.price * item.qty;
+                totalPrice += subtotal;
+                message += `${index + 1}. *${item.name}*\n   الكمية: ${item.qty} | السعر: ${subtotal.toLocaleString()} ج.م\n`;
+            });
+
+            message += `\n------------------------------------\n`;
+            message += `💰 *إجمالي قيمة الطلبية:* ${totalPrice.toLocaleString()} ج.م\n`;
+            message += `------------------------------------\n`;
+            message += `✨ مرسل عبر منصة عروض DENTOVA الرسمية`;
+
+            const phone = "201061232326";
+            const encoded = encodeURIComponent(message);
+            window.open(`https://wa.me/${phone}?text=${encoded}`, '_blank');
+        }
+
+        // Copy Order Text to Clipboard
+        function copyOrderText() {
+            if (cart.length === 0) {
+                showToast("⚠️ السلة فارغة حالياً!");
+                return;
+            }
+
+            let text = `طلب مستلزمات عيادة - DENTOVA\n`;
+            let totalPrice = 0;
+            cart.forEach((item, index) => {
+                const subtotal = item.price * item.qty;
+                totalPrice += subtotal;
+                text += `${index + 1}. ${item.name} × ${item.qty} = ${subtotal} ج.م\n`;
+            });
+            text += `\nالإجمالي الكلي: ${totalPrice.toLocaleString()} ج.م\nهاتف DENTOVA: 01061232326`;
+
+            navigator.clipboard.writeText(text).then(() => {
+                showToast("📋 تم نسخ قائمة الطلبية إلى الحافظة!");
+            }).catch(() => {
+                showToast("تم النسخ");
+            });
+        }
+
+        // Printable Invoice
+        function printInvoice() {
+            if (cart.length === 0) {
+                showToast("⚠️ السلة فارغة، أضف أصنافاً للطباعة");
+                return;
+            }
+
+            const docName = document.getElementById('docName').value.trim() || 'السيد الطبيب / المركز الطبي';
+            const docPhone = document.getElementById('docPhone').value.trim();
+            const docAddress = document.getElementById('docAddress').value.trim();
+
+            document.getElementById('printDocName').innerText = docName;
+            document.getElementById('printDocPhone').innerText = docPhone ? `هاتف: ${docPhone}` : '';
+            document.getElementById('printDocAddress').innerText = docAddress ? `العنوان: ${docAddress}` : '';
+            document.getElementById('printDate').innerText = new Date().toLocaleDateString('ar-EG');
+            document.getElementById('printRandomCode').innerText = Math.floor(100000 + Math.random() * 900000);
+
+            const tbody = document.getElementById('printInvoiceItems');
+            tbody.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const subtotal = item.price * item.qty;
+                total += subtotal;
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${item.name}</td>
+                    <td>${item.price} ج.م</td>
+                    <td>${item.qty}</td>
+                    <td>${subtotal} ج.م</td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            document.getElementById('printTotalAmount').innerText = `${total.toLocaleString()} ج.م`;
+            window.print();
+        }
+
+        // Toast Helper
+        function showToast(msg, icon = '✅') {
+            const toast = document.getElementById('toastBox');
+            document.getElementById('toastMsg').innerText = msg;
+            document.getElementById('toastIcon').innerText = icon;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        }
+
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', initCart);
+    </script>
+</body>
+</html>
